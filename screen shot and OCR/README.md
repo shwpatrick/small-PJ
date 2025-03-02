@@ -84,8 +84,25 @@ ocr_windows_bebug.ipynb 實現了這個功能
 ocr_toast_debug.ipynb 進行了改進  
 
 ## 後續討論
-Tesseract 在繁中處理上效果不太好，但考慮到離線可用，就先將就一下。
+Tesseract 在繁中處理上效果不太好，但考慮到離線可用，就先將就一下。  
 程式本身是按照預設路徑去找 Tesseract ，如果電腦本身沒有安裝或改路徑，.exe應該是沒辦法運行
+
+## 打包問題
+在打包後使用.exe後，遇到了與[這一篇討論](https://stackoverflow.com/questions/50758709/the-win10toast-distribution-was-not-found-is-displayed-while-i-execute-a-python)同樣的問題，  
+```
+toaster.show_toast(title, text, duration=10)  # 顯示通知，持續 10 秒
+```
+這一行的指令雖然運行上沒有問題，但當轉到執行檔時它會因為ICO圖檔的path設定而出錯，改成如下  
+```
+toaster.show_toast(title, text, icon_path="OCR_ICON.ico", duration=10)  # 顯示通知，持續 10 秒
+```
+存在了icon_path再去打包錯誤消失
+當然icon要自己弄一個把它包一起 
+最後我的打包指令如下
+```
+pyinstaller --onefile --icon=OCR_ICON.ico --windowed --add-data "OCR_ICON.ico;." ocr_toast.py
+```
+
 
 
 
