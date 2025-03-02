@@ -44,14 +44,18 @@ pip install pytesseract
 ### **Python 程式打包成 Windows 可執行檔**
 
 1. 步驟 1: 安裝 `pyinstaller`
-	1. 首先，安裝 `pyinstaller`，這是一個可以將 Python 程式打包成執行檔的工具。在虛擬環境中執行以下命令：
+	1. 首先，安裝 `pyinstaller`，這是一個可以將 Python 程式打包成執行檔的工具。
+ 	2. 在虛擬環境中執行以下命令：
 		`pip install pyinstaller`
 
+2. 將.ipynb轉成.py，或者直接開一個.py把內容摳過去 
+	`jupyter nbconvert --to script my_script.ipynb`
+3. 打包
+	`pyinstaller --onefile --windowed my_script.py`
 
-jupyter nbconvert --to script my_script.ipynb
-pyinstaller --onefile --windowed my_script.py
+### **語言擴充**
 
-
+可以前往[Tesseract 的 GitHub 頁面](https://github.com/tesseract-ocr/tessdata)下載所需的語言檔案。如果沒有安裝，可以手動下載並放置在 tessdata 目錄下。
 
 # 遇到的困難與解決(歷程記錄)
 
