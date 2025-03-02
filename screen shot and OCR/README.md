@@ -60,7 +60,8 @@ pip install pytesseract
 # 遇到的困難與解決(歷程記錄)
 
 ## 初步架構
-screenshot_debug.ipynb
+[screenshot_debug.ipynb](data\screenshot_bebug.ipynb)
+
 實現了基本的內容，當執行時開始監測圖像剪貼簿的內容，  
 當內容進行變化時，觸發OCR，並將處理完的文本丟回剪貼簿。  
 
@@ -77,11 +78,11 @@ screenshot_debug.ipynb
 這個主動使用OCR的工作可以把它綁在工具列上，我自己按就好。  
 所以改變了設計想法，只需要做成一個將剪貼簿圖片OCR後轉存至剪貼簿文本就好  
 
-ocr_windows_bebug.ipynb 實現了這個功能  
+[ocr_windows_bebug.ipynb](data/ocr_windows_bebug.ipynb) 實現了這個功能  
 ## 優化
 使用提示框導致確認按鍵變多了，不太符合一個簡化的小程式設計，  
 因此決定將訊息方式改成使用WIN 10/11的側欄通知，  
-ocr_toast_debug.ipynb 進行了改進  
+[ocr_toast_debug.ipynb](data/ocr_toast_debug.ipynb) 進行了改進  
 
 ## 後續討論
 Tesseract 在繁中處理上效果不太好，但考慮到離線可用，就先將就一下。  
