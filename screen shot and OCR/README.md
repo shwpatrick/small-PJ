@@ -83,5 +83,7 @@ ocr_windows_bebug.ipynb 實現了這個功能
 因此決定將訊息方式改成使用WIN 10/11的側欄通知，  
 ocr_toast_debug.ipynb 進行了改進  
 
+## 後續討論
+Tesseract 在繁中處理上效果不太好，但考慮到離線可用，就先將就一下。
 
 
