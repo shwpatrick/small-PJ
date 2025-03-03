@@ -7,6 +7,7 @@
 
 # 架構與用法
 整個程式主體是用在Obsidian上的可視化框架  
+圖形視覺化主要靠Dataviewjs實現  
 配合第三方外掛Dataview 跟 Contribution Graph(只有熱力圖)的部分  
 從Obsidian下看會有以下幾個區塊  
 
