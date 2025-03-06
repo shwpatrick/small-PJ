@@ -104,6 +104,20 @@ toaster.show_toast(title, text, icon_path="OCR_ICON.ico", duration=10)  # 顯示
 pyinstaller --onefile --icon=OCR_ICON.ico --windowed --add-data "OCR_ICON.ico;." ocr_toast.py
 ```
 
+## 病毒檢測
+某天起床發現我的程式功能沒了  
+查一查發現是Windows Defender把它嘎了  
+可能誤判原因:  
+	1. 讀取或修改系統設定  
+	2. 操作剪貼簿或螢幕截圖  
+	3. 使用 PyInstaller 或其他打包工具打包 Python 腳本（這類工具經常被誤判）  
+總之，直接把病毒隔離動作還原    
+然後透過排除清單先救了回來  
+謹此紀錄  
+ 
+![image](https://github.com/user-attachments/assets/c9c37ecf-4977-43b3-9d62-1463dd592455)
+
+
 
 
 
